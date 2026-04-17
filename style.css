@@ -150,18 +150,18 @@ img {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
-.brand-icon {
-  width: 44px;
-  height: 44px;
+.brand-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
   background: linear-gradient(135deg, var(--primary-soft), var(--white));
+  border: 1px solid rgba(184, 124, 129, 0.14);
   box-shadow: 0 8px 20px rgba(170, 110, 117, 0.16);
-  font-size: 1.1rem;
+  padding: 4px;
 }
 
 .brand-text {
@@ -338,7 +338,8 @@ img {
 .product-card,
 .cta-card,
 .contact-main,
-.contact-side {
+.contact-side,
+.pricing-card {
   background: var(--surface);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -453,7 +454,8 @@ img {
 .service-card:hover,
 .product-card:hover,
 .contact-main:hover,
-.contact-side:hover {
+.contact-side:hover,
+.pricing-card:hover {
   transform: translateY(-6px);
 }
 
@@ -634,6 +636,75 @@ img {
   font-size: 0.94rem;
 }
 
+/* SECTION TARIFS */
+
+.pricing-card {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: var(--radius-xl);
+  padding: 34px 28px;
+  transition: var(--transition);
+}
+
+.pricing-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.pricing-card p {
+  color: var(--text-soft);
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.price-highlight {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary-soft), rgba(255,255,255,0.95));
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 1.05rem;
+  border: 1px solid rgba(184, 124, 129, 0.14);
+}
+
+.order-rules {
+  margin-top: 22px;
+  display: grid;
+  gap: 14px;
+}
+
+.order-rule {
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(184, 124, 129, 0.12);
+}
+
+.order-rule strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.order-rule span {
+  color: var(--text-soft);
+}
+
+.paypal-button {
+  margin-top: 22px;
+}
+
+.paypal-note {
+  margin-top: 14px;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+}
+
+/* CTA */
+
 .cta-section {
   padding-top: 20px;
 }
@@ -648,6 +719,8 @@ img {
   max-width: 680px;
   margin: 0 auto 24px;
 }
+
+/* CONTACT */
 
 .contact-grid {
   display: grid;
@@ -742,6 +815,8 @@ img {
   display: none;
 }
 
+/* FOOTER */
+
 .site-footer {
   padding: 40px 0 46px;
   border-top: 1px solid rgba(184, 124, 129, 0.1);
@@ -773,6 +848,8 @@ img {
   text-align: right;
 }
 
+/* ANIMATIONS */
+
 .reveal {
   opacity: 0;
   transform: translateY(26px);
@@ -795,6 +872,8 @@ img {
 .reveal-delay-3 {
   transition-delay: 0.32s;
 }
+
+/* RESPONSIVE */
 
 @media (max-width: 1100px) {
   .hero-grid,
@@ -913,7 +992,8 @@ img {
   .visual-card,
   .contact-main,
   .contact-side,
-  .cta-card {
+  .cta-card,
+  .pricing-card {
     padding: 22px;
   }
 
@@ -931,5 +1011,10 @@ img {
 
   .product-image {
     height: 360px;
+  }
+
+  .brand-logo {
+    width: 48px;
+    height: 48px;
   }
 }

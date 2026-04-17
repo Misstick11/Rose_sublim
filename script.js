@@ -45,3 +45,9 @@ const revealOnScroll = () => {
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+
+document.querySelectorAll(".paypal-button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.innerText = "Redirection vers PayPal...";
+  });
+});
